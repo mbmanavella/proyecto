@@ -34,8 +34,10 @@ body {
 .container>.header, .container>.footer {
     grid-column: 1/-1;
     /* back, color de contorno del header y footer hijos de container */
-    background-color: #1e272e;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98, 14, 113, 0.989) 100%, rgba(0,212,255,1) 100%);;
     color: whitesmoke;
+
 }
 
 .container>.content {
@@ -150,9 +152,20 @@ nav ul{
 }
 nav ul li{
    list-style: none;
-   background-color: #5f3e73;
    padding: 0.4rem;
+   border-radius: 0.25em;
+   text-transform: uppercase;
    
+}
+
+a {
+  background-color: rgb(2,0,36);
+  transition: background-color .10s;
+}
+
+a:hover {
+  background: rgb(8, 1, 15);
+  background: linear-gradient(90deg, rgba(153, 153, 201, 0.356) 100%, rgba(125, 65, 136, 0.989) 100%);
 }
 
 /* CONTENEDOR PARA BOTON*/
@@ -167,7 +180,7 @@ nav ul li{
   height: auto;
 }
 
-/* animacion de imagen, cambio color blanco por negro */
+/* animacion de imagen */
 .container2 .btn {
   position: absolute;
   top: 10%;
@@ -175,7 +188,7 @@ nav ul li{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
-  color: black;
+  color: white;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
@@ -189,8 +202,7 @@ nav ul li{
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
-    
-
+ 
   .header {
       text-align: center;
   }
@@ -219,3 +231,8 @@ nav ul li{
   grid-column: 1 / -1;
 }
 }
+
+footer {
+  text-align: center;
+}
+
